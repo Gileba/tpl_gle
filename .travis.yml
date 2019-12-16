@@ -8,7 +8,7 @@ php:
 - '7.4'
 - 'nightly'
 jobs:
-  allow_failures: 
+  allow_failures:
     - 'nightly'
 before_script:
 - composer require --dev phpunit/phpunit $PHPUNIT_VERSION
