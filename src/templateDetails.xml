@@ -17,6 +17,13 @@
 		<folder>images</folder>
 		<folder>less</folder>
 	</files>
+	<positions>
+		<position>top</position>
+		<position>nav</position>
+		<position>content-top</position>
+		<position>content-bottom</position>
+		<position>footer</position>
+	</positions>
 	<config>
 		<fieldset name="params">
 			<fieldset name="global">

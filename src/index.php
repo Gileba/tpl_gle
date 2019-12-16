@@ -16,6 +16,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-		<jdoc:include type="component" />
+		<div class="container">
+			<div class="top"><jdoc:include type="modules" name="top" /></div>
+			<div class="nav"><jdoc:include type="modules" name="nav" /></div>
+			<div class="content">
+				<div class="content-top"><jdoc:include type="modules" name="content-top" /></div>
+				<div class="component"><jdoc:include type="component" /></div>
+				<div class="content-bottom"><jdoc:include type="modules" name="content-bottom" /></div>
+			</div>
+			<div class="footer"><jdoc:include type="modules" name="footer" /></div>
+		</div>
 	</body>
 </html>
