@@ -9,7 +9,7 @@ php:
 - 'nightly'
 jobs:
   allow_failures:
-    - 'nightly'
+    - php: 'nightly'
 before_script:
 - composer require --dev phpunit/phpunit $PHPUNIT_VERSION
 - composer require --dev phpunit/php-code-coverage
