@@ -1,0 +1,45 @@
+language: php
+php:
+- '7.0'
+- '7.1'
+- '7.2'
+- '7.3'
+- '7.4'
+jobs:
+  - include:
+    - php: '5.6'
+      env: DB=mysql PHPUNIT_VERSION=5
+    - php: '7.0'
+      env: DB=mysql PHPUNIT_VERSION=6
+    - php: '7.1'
+      env: DB=mysql PHPUNIT_VERSION=7
+    - php: '7.2'
+      env: DB=mysql PHPUNIT_VERSION=7
+    - php: '7.3'
+      env: DB=mysql PHPUNIT_VERSION=8
+    - php: '7.4'
+      env: DB=mysql PHPUNIT_VERSION=8
+before_script:
+- composer require --dev phpunit/phpunit $PHPUNIT_VERSION
+- composer require --dev phpunit/php-code-coverage
+- phpenv config-rm xdebug.ini
+script:
+- ./vendor/bin/phpunit --configuration travisci-phpunit.xml --no-configuration tests
+before_deploy:
+- cd ..
+- mkdir packages
+- zip -r packages/tpl_ttp.zip tpl_ttp/src -x \*.git\*
+- git clone -b 1.0.0 https://github.com/Gileba/plg_system_templatecompanion.git plg_system_templatecompanion
+- cd plg_system_templatecompanion/src; zip -r ../../packages/plg_system_templatecompanion.zip * -x \*.git\* *.gitignore*; cd ../../
+- cp tpl_ttp/pkg_ttp.xml pkg_ttp.xml
+- zip pkg_ttp packages/tpl_ttp.zip packages/plg_system_templatecompanion.zip pkg_ttp.xml
+deploy:
+  provider: releases
+  file:
+  - packages/tpl_ttp.zip
+  - pkg_ttp.zip
+  skip_cleanup: true
+  on:
+    tags: true
+  api_key: $GITHUB_TOKEN
+after_deploy: curl -T tpl_ttp/tpl_ttp.xml -u $FTP_USER:$FTP_PASSWORD $FTP_SERVER
