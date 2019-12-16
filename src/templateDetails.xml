@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9.13" type="template" method="upgrade">
+	<name>tpl_gle</name>
+	<creationDate>2019-12-16</creationDate>
+	<author>Gijs Lamon</author>
+	<authorEmail>info@gileba.be</authorEmail>
+	<authorUrl>http://www.gileba.be/</authorUrl>
+	<copyright>(c) 2019 by Gileba</copyright>
+	<license>GNU/GPL</license>
+	<version>0.1.0</version>
+	<description>GLE Group</description>
+	<files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>less</folder>
+	</files>
+	<config>
+		<fieldset name="params">
+			<fieldset name="global">
+				<field name="useLESS" type="hidden" default="true" />
+			</fieldset>
+		</fieldset>
+	</config>
+</extension>
