@@ -8,7 +8,8 @@ php:
 - '7.4'
 - 'nightly'
 jobs:
-- allow_failures: 'nightly'
+  allow_failures: 
+    - 'nightly'
 before_script:
 - composer require --dev phpunit/phpunit $PHPUNIT_VERSION
 - composer require --dev phpunit/php-code-coverage
