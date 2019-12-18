@@ -20,6 +20,7 @@
 			<div class="top"><jdoc:include type="modules" name="top" /></div>
 			<div class="nav"><jdoc:include type="modules" name="nav" /></div>
 			<div class="content">
+				<div class="messages"><jdoc:include type="message" /></div>
 				<div class="content-top"><jdoc:include type="modules" name="content-top" /></div>
 				<div class="component"><jdoc:include type="component" /></div>
 				<div class="content-bottom"><jdoc:include type="modules" name="content-bottom" /></div>
