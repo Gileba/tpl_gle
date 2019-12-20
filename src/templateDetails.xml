@@ -19,7 +19,7 @@
 	</files>
 	<positions>
 		<position>top</position>
-		<position>nav</position>
+		<position>navigation</position>
 		<position>content-top</position>
 		<position>content-bottom</position>
 		<position>footer</position>
