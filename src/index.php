@@ -6,6 +6,7 @@
 	$menu 		= $app->getMenu();
 	$params		= $app->getTemplate(true)->params;
 	$config 	= JFactory::getConfig();
+	$pageclass 	= $menu->getActive()->getParams(true)->get('pageclass_sfx');
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
-	<body>
+	<body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?>">
 		<div class="container">
 			<div class="top"><jdoc:include type="modules" name="top" /></div>
 			<div class="navigation"><jdoc:include type="modules" name="navigation" /></div>
