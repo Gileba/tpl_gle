@@ -18,6 +18,7 @@
 		<jdoc:include type="head" />
 	</head>
 	<body class="<?php echo $pageclass ? htmlspecialchars($pageclass) : 'default'; ?>">
+		<div id="offcanvas"><jdoc:include type="modules" name="offcanvas" /></div>
 		<div class="container">
 			<div class="top"><jdoc:include type="modules" name="top" /></div>
 			<div class="navigation"><jdoc:include type="modules" name="navigation" /></div>
