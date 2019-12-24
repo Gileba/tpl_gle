@@ -18,6 +18,7 @@
 		<folder>less</folder>
 	</files>
 	<positions>
+		<position>offcanvas</position>
 		<position>top</position>
 		<position>navigation</position>
 		<position>content-top</position>
