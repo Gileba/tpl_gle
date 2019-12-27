@@ -18,6 +18,11 @@ if ($tagId = $params->get('tag_id', ''))
 
 // The menu class is deprecated. Use nav instead
 ?>
+<button class="hamburger hamburger--vortex" type="button" aria-label="Menu" aria-controls="navigation">
+  <span class="hamburger-box">
+	<span class="hamburger-inner"></span>
+  </span>
+</button>
 <ul class="nav menu<?php echo $class_sfx; ?> mod-list"<?php echo $id; ?>>
 <?php foreach ($list as $i => &$item)
 {
