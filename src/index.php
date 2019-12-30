@@ -30,6 +30,6 @@
 			</div>
 			<div class="footer"><jdoc:include type="modules" name="footer" /></div>
 		</div>
-		<script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/hamburger.js"></script> ?>
+		<script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/hamburger.js"></script>
 	</body>
 </html>
