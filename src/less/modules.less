@@ -1,0 +1,82 @@
+.module-primary {
+	.gil-container-primary();
+	.gil-rounded();
+	color: @secondary-color;
+	padding: 20px 40px 20px 40px;
+	margin: 20px 0;
+	div {
+		margin-left: 0;
+		margin-right: 0;
+	}
+		
+	@media screen and (min-width: 1201px) {
+		div.margin-extra {
+			margin-left: 100px;
+			margin-right: 100px;
+		}
+	}
+}
+
+.module-inverted {
+	.gil-rounded();
+	padding: 20px 80px 20px 40px;
+	margin: 40px 30px 40px 0;
+	background-image: url('/templates/tpl_gle/images/footer.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: right center;
+	div {
+		margin-left: 0;
+	}
+	@media screen and (max-width: 1200px) {
+		& {
+		padding: 20px 120px 20px 40px;					
+		}
+	}
+	width: 100%;
+}
+
+.custom h2 {
+	margin-left: 20px;
+}
+
+.transport-module:after {
+	padding-top: 33%;
+	display: inline;
+	content: '';
+}
+
+.content-top {
+	@media screen and (max-width: 1200px) {
+		.gil-padding-right-xs {
+			padding-right: 0;
+		}
+		.gil-padding-left-xs {
+			padding-left: 0;
+		}
+	}
+}
+	
+.gil-all-link {
+	h1 {
+		padding-left: 40px;
+		padding-top: 20px;
+		@media screen and (max-width: 1200px) {
+			font-size: 2em;
+			padding-left: 20px;
+		}
+	}
+
+	.header-text {
+		padding-left: 20px;
+		font-weight: 700;
+		padding-bottom: 20px;
+		font-size: 2em;
+		line-height: 1.2em;
+		
+		@media screen and (max-width: 1200px) {
+			font-size: 1.5em;
+			margin-left: 0;
+		}
+	}
+}

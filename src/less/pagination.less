@@ -1,0 +1,48 @@
+// Article Next / Previous
+
+ul.pager {
+	list-style: none;
+	padding-inline-start: 0px;
+	li {
+		padding-inline-start: 0px;
+		&.next a {
+			padding-left: 20px;
+		}
+	}
+}
+
+
+// Bloglist naviagtion
+
+.pagination {
+	.gil-center();
+	
+	ul {
+		list-style-type: none;
+		
+		li {
+			display: inline;
+			margin-top: 20px;
+			font-weight: bolder;
+			text-transform: uppercase;
+			font-size: 0.7em;
+			
+			a {
+				border-radius: 30px;
+				padding: 10px;
+				text-decoration: none;
+				background-color: @primary-color;
+				color: @secondary-color;
+				text-align: center;
+			}
+			
+			span {
+				border-radius: 30px;
+				padding: 10px;
+				background-color: @secondary-color;
+				color: @text-color;
+				text-align: center;
+			}
+		}
+	}
+}

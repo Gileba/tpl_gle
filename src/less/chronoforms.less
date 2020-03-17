@@ -1,0 +1,98 @@
+.chronoforms form {
+	margin-left: 60px;
+	div.field {
+		display: flex;
+		align-items: center;
+	}
+	
+	.field label {
+		width: 30%;
+		padding-right: 20px;
+	}
+	
+	.field input[type=text] {
+		width: 50%;
+	}
+	
+	h2 {
+		font-size: 2.25em;
+		margin: revert;
+	}
+	
+	.dropdown {
+		margin: 0;
+	}
+	
+	.multifield, .field .dropdown {
+		.field  {
+			width: 100%;
+	
+			.checkbox {
+				.gil-margin-remove-top();
+				.gil-margin-remove-bottom();				
+			}
+	
+			label {
+				width: 100%;
+			}
+		}
+	
+		.menu .item {
+			margin: 0;
+		}
+	}
+
+	.readmore {
+		margin-left: 0;
+		
+		.btn {
+			padding-top: 2px;
+		}
+		
+		.ui.green.button {
+			background-color: @primary-color;
+		}
+
+		.ui.button {
+			font-size: 1em;
+
+			svg {
+				box-sizing: content-box;
+			}
+		}
+	}
+}
+
+.chronoforms6_credits {
+	display: none;
+}
+
+.ui.form {
+	font-size: 20px;
+}
+
+.semanticui-body {
+	.gil-column-span();
+}
+
+@media screen and (max-width: 1200px) {
+	.chronoforms {
+		margin-left: 0;
+		margin-right: 0;
+		div {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		form {
+			margin-left: 0;
+			margin-right: 0;
+			.field label {
+				width: 40%;
+				padding-right: 20px;
+			}
+			.field input[type=text] {
+				width: 60%;
+			}
+		}
+	}
+}

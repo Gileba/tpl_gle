@@ -1,0 +1,101 @@
+.container .top {
+	margin-top: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	background-color: @primary-color;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	color: @secondary-color;
+	font-weight: bolder;
+	display: flex;
+	.gil-uppercase();
+	align-items: center;
+	font-stretch: extra-condensed;
+	font-size: 0.8em;
+	
+	.hamburger {
+		display: none;
+	}
+	
+	.custom {
+		.gil-margin-remove-right();			
+
+		.social {
+			.gil-margin-remove-left();
+			.gil-margin-remove-right();			
+		}
+	}
+	
+	.nav {
+		.gil-margin-remove-left();
+		.gil-margin-remove-right();
+		padding-inline-start: 0;
+			
+		li {
+			.gil-margin-remove-left();
+			.button();
+			margin: 0 15px;
+			padding: 5px 1em;
+		}
+	}
+	
+	.mod-languages {
+		a {
+			color: white;
+		}		
+	}
+}
+
+.container .top div, div.navigation div, div.navigation ul {
+	flex: auto;
+	.gil-margin-remove-top();
+	.gil-margin-remove-bottom();
+}
+
+.container .top ul, ul.nav {
+	list-style: none;
+	.gil-right();
+	li a {
+		text-decoration: none;
+	}
+}
+
+@media screen and (min-width: 1201px) {
+	.container .top ul li, ul.nav li {
+		display: inline;
+	}
+}
+
+ul.nav li a {
+	color: @text-color;
+}
+
+.container .top .nav div {
+	flex: 0 0 auto;
+}
+
+.container .top .nav {
+	display: flex;
+	align-items: center;
+}
+
+.container .top .nav .custom p {
+	overflow: hidden;
+	height: 100px;
+}
+
+.container .top .nav .custom {
+	margin: 0;
+	width: 20%;
+}
+
+@media screen and (max-width: 1200px) {
+	.container .top {
+		display: none;
+	}
+}
+
+.content-top, .content-bottom {
+	display: flex;
+	flex-wrap: wrap;
+}

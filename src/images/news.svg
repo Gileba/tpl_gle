@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with EazyDraw for Mac ( http://www.eazydraw.com/ ) -->
+
+<svg
+    version="1.1"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns="http://www.w3.org/2000/svg"
+    width="70"
+    height="110.25"
+    viewBox="0, 0, 70, 110.25"
+    preserveAspectRatio="none"
+    id="svg2">
+   <defs
+       id="defs_18667682"/>
+   <metadata
+       id="metadata7">
+      <rdf:RDF>
+         <cc:Work
+             rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+            <dc:title></dc:title>
+         </cc:Work>
+      </rdf:RDF>
+   </metadata>
+   <g
+       id="layer_Paper"
+       style="fill:#000000;fill-opacity:1;stroke:#000000;stroke-opacity:1;fill-rule:nonzero;stroke-linecap:square;stroke-linejoin:miter;stroke-width:1;stroke-miterlimit:10">
+      <path
+          style="fill:#74BE21;stroke:none"
+          id="08081D81"
+          d="M0.010000000196,0 L29.67,0.119999999983 L70,0.119999999983 C68.91,0.340000000027 67.98,0.680000000053 67.02,1.180000000021 L28.66,23.31 C25.57,25.09 23.04,29.48 23.04,33.05 L23.04,77.32 C23.04,80.89 25.57,85.27 28.66,87.06
+L67.02,109.19 C67.98,109.69 68.91,110.03 70,110.25 L31.17,110.25 L631.17,110.25 L29.66,110.25 L23.61,110.25 C23.60,110.25 23.59,110.25 23.59,110.25 L0,110.13 L0,0 z"/>
+   </g>
+</svg>
