@@ -30,6 +30,21 @@
 		.gil-margin-remove-left();
 		.gil-margin-remove-right();
 		padding-inline-start: 0;
+		display: flex;
+		align-items: center;
+
+		div {
+			flex: 0 0 auto;
+		}
+
+		.custom {
+			margin: 0;
+			width: 20%;
+			p {
+				overflow: hidden;
+				height: 100px;
+			}
+		}
 
 		li {
 			.gil-margin-remove-left();
@@ -68,25 +83,6 @@
 
 ul.nav li a {
 	color: @text-color;
-}
-
-.container .top .nav div {
-	flex: 0 0 auto;
-}
-
-.container .top .nav {
-	display: flex;
-	align-items: center;
-}
-
-.container .top .nav .custom p {
-	overflow: hidden;
-	height: 100px;
-}
-
-.container .top .nav .custom {
-	margin: 0;
-	width: 20%;
 }
 
 @media screen and (max-width: 1200px) {
