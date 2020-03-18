@@ -12,7 +12,7 @@ defined('JPATH_BASE') or die;
 // Create a shortcut for params.
 $params = $displayData->params;
 $canEdit = $displayData->params->get('access-edit');
-JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
+JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 ?>
 
 <?php if ($displayData->state == 0 || $params->get('show_title') || ($params->get('show_author') && !empty($displayData->author))) : ?>
