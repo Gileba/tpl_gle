@@ -93,6 +93,18 @@ ul.nav li.parent:hover .nav-child {
 				max-width: 120px;
 			}
 		}
+		.customhamburger {
+			display: block;
+			position: fixed;
+			background-color: @background-color;
+			z-index: 99;
+			top: 0;
+			right: -10px;
+			height: 60px;
+		}
+		.nav {
+			display: none;
+		}
 	}
 
 	.offcanvas {
@@ -162,20 +174,5 @@ ul.nav li.parent:hover .nav-child {
 	}
 	.offcanvas.open {
 		display: block;
-	}
-
-	.navigation {
-		.customhamburger {
-			display: block;
-			position: fixed;
-			background-color: @background-color;
-			z-index: 99;
-			top: 0;
-			right: -10px;
-			height: 60px;
-		}
-		.nav {
-			display: none;
-		}
 	}
 }
