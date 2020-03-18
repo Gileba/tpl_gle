@@ -45,4 +45,4 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 			<span class="label label-warning"><?php echo JText::_('JEXPIRED'); ?></span>
 		<?php endif; ?>
 	</div>
-<?php endif; ?>
+<?php endif; 
