@@ -25,10 +25,10 @@ rules:
   font-family-name-quotes: "always-unless-keyword"
   font-weight-notation:
   	- "numeric"
-  	- ignore: "relative"
+  	ignore: "relative"
   indentation:
   	- "tab"
-  	- indentClosingBrace: false
+  	indentClosingBrace: false
   max-empty-lines: 1
   no-eol-whitespace: true
   no-missing-end-of-source-newline: true
