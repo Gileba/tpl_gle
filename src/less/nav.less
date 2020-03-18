@@ -3,20 +3,20 @@
 	align-items: center;
 	font-size: 0.8em;
 	margin-bottom: 0;
-}
 
-.navigation .custom.logo {
-	margin: 0;
-	width: 20%;
-}
+	.custom.logo {
+		margin: 0;
+		width: 20%;
+	}
 
-.navigation .nav {
-	text-align: right;
-	.gil-uppercase();
-}
+	.nav {
+		text-align: right;
+		.gil-uppercase();
+	}
 
-.navigation ul.nav {
-	list-style: none;
+	ul.nav {
+		list-style: none;
+	}
 }
 
 ul.nav li {
@@ -34,29 +34,28 @@ ul.nav li.parent:hover .nav-child {
 		position: relative;
 		display: inline-block;
 		padding-bottom: 7px;
-	}
-
-	ul.nav li.parent .nav-child {
-		display: none;
-		position: absolute;
-		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-		padding-inline-start: 10px;
-		padding: 10px;
-		text-transform: none;
-		min-width: 100px;
-		text-align: right;
-		right: 0;
-		margin-top: 7px;
-		background-color: white;
-		z-index: 99;
-		li {
-			display: block;
-			white-space: nowrap;
-			padding-top: 5px;
-			padding-bottom: 5px;
-			font-weight: normal;
-			a {
-				color: lighten(black, 30%);
+		.nav-child {
+			display: none;
+			position: absolute;
+			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+			padding-inline-start: 10px;
+			padding: 10px;
+			text-transform: none;
+			min-width: 100px;
+			text-align: right;
+			right: 0;
+			margin-top: 7px;
+			background-color: white;
+			z-index: 99;
+			li {
+				display: block;
+				white-space: nowrap;
+				padding-top: 5px;
+				padding-bottom: 5px;
+				font-weight: normal;
+				a {
+					color: lighten(black, 30%);
+				}
 			}
 		}
 	}
@@ -68,14 +67,14 @@ ul.nav li.parent:hover .nav-child {
 	background-color: white;
 }
 
-.navigation .hamburger.is-active:hover {
-	opacity: 1;
-}
-
 .hamburger, .navigation .hamburger.is-active {
 	.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
 		background-color: @primary-color;
 	}
+}
+
+.navigation .hamburger.is-active:hover {
+	opacity: 1;
 }
 
 .offcanvas {
@@ -92,9 +91,21 @@ ul.nav li.parent:hover .nav-child {
 			img {
 				max-width: 120px;
 			}
-		}	
+		}
+		.customhamburger {
+			display: block;
+			position: fixed;
+			background-color: @background-color;
+			z-index: 99;
+			top: 0;
+			right: -10px;
+			height: 60px;
+		}
+		.nav {
+			display: none;
+		}
 	}
-	
+
 	.offcanvas {
 		display: none;
 		background-color: @primary-color;
@@ -105,6 +116,13 @@ ul.nav li.parent:hover .nav-child {
 		flex: 1 0;
 		position: fixed;
 		margin: 0;
+		.mod-languages {
+			text-align: right;
+			a {
+				color: @secondary-color;
+				font-weight: bolder;
+			}
+		}
 		ul.nav {
 			display: flex;
 			width: 100%;
@@ -155,19 +173,5 @@ ul.nav li.parent:hover .nav-child {
 	}
 	.offcanvas.open {
 		display: block;
-	}
-	.navigation {
-		.customhamburger {
-			display: block;
-			position: fixed;
-			background-color: @background-color;
-			z-index: 99;
-			top: 0;
-			right: -10px;
-			height: 60px;		
-		}
-		.nav {
-			display: none;
-		}
 	}
 }
