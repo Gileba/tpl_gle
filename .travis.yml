@@ -23,14 +23,14 @@ before_deploy:
 - git clone -b 1.0.0 https://github.com/Gileba/plg_system_templatecompanion.git plg_system_templatecompanion
 - cd plg_system_templatecompanion/src; zip -r ../../packages/plg_system_templatecompanion.zip * -x \*.git\* *.gitignore*; cd ../../
 - cp tpl_gle/pkg_gle.xml pkg_gle.xml
-- zip pkg_gle packages/tpl_gle.zip packages/plg_system_templatecompanion.zip pkg_ttp.xml
+- zip pkg_gle packages/tpl_gle.zip packages/plg_system_templatecompanion.zip pkg_gle.xml
 deploy:
   provider: releases
   file:
   - packages/tpl_gle.zip
-  - pkg_ttp.zip
+  - pkg_gle.zip
   skip_cleanup: true
   on:
     tags: true
   api_key: $GITHUB_TOKEN
-after_deploy: curl -T tpl_ttp/tpl_gle.xml -u $FTP_USER:$FTP_PASSWORD $FTP_SERVER
+after_deploy: curl -T tpl_gle/tpl_gle.xml -u $FTP_USER:$FTP_PASSWORD $FTP_SERVER
