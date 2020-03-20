@@ -154,7 +154,7 @@ JHtml::_('behavior.caption');
 			<?php $active = $menu->getActive(); ?>
 			<?php $itemId = $active->id; ?>
 			<?php $link = new JUri(JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false)); ?>
-			<?php 
+			<?php
 			$link->setVar('return',
 				base64_encode(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language))
 			);
