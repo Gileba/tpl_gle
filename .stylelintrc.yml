@@ -1,6 +1,5 @@
 rules:
   color-no-invalid-hex: true
-  declaration-no-important: true
   shorthand-property-no-redundant-values: true
   function-url-no-scheme-relative: true
   no-extra-semicolons: true
