@@ -42,6 +42,7 @@ if (substr($className, -1) === 's')
 {
 	$className = rtrim($className, 's');
 }
+
 $tagsData = $category->tags->itemTags;
 ?>
 <div>
