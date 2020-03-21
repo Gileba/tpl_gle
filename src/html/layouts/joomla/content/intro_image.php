@@ -29,4 +29,4 @@ $params = $displayData->params;
 		alt="<?php echo htmlspecialchars($images->image_intro_alt, ENT_COMPAT, 'UTF-8'); ?>" itemprop="thumbnailUrl"/>
 	<?php endif; ?>
 	</div>
-<?php endif; ?>
+<?php endif;
