@@ -2,18 +2,18 @@ ul.nav li a {
 	color: @text-color;
 }
 
+div.navigation div, div.navigation ul, .container .top div {
+	flex: auto;
+	.gil-margin-remove-top();
+	.gil-margin-remove-bottom();
+}
+
 ul.nav, .container .top ul {
 	list-style: none;
 	.gil-right();
 	li a {
 		text-decoration: none;
 	}
-}
-
-div.navigation div, div.navigation ul, .container .top div {
-	flex: auto;
-	.gil-margin-remove-top();
-	.gil-margin-remove-bottom();
 }
 
 .container .top {
