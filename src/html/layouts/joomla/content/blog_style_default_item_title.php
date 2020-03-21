@@ -22,7 +22,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 				<?php if ($params->get('link_titles') && ($params->get('access-view') || $params->get('show_noauth', '0') == '1')) : ?>
 					<a href="<?php echo JRoute::_(
 						ContentHelperRoute::getArticleRoute($displayData->slug, $displayData->catid, $displayData->language)
-					); ?>" 
+							 ); ?>" 
 					itemprop="url">
 						<?php echo $this->escape($displayData->title); ?>
 					</a>
