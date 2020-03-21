@@ -39,9 +39,11 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 			<span class="label label-warning"><?php echo JText::_('JNOTPUBLISHEDYET'); ?></span>
 		<?php endif; ?>
 		
-		<?php if ($displayData->publish_down != JFactory::getDbo()->getNullDate()
+		<?php
+			if ($displayData->publish_down != JFactory::getDbo()->getNullDate()
 			&& (strtotime($displayData->publish_down) < strtotime(JFactory::getDate()))
-		) : ?>
+			) :
+		?>
 			<span class="label label-warning"><?php echo JText::_('JEXPIRED'); ?></span>
 		<?php endif; ?>
 	</div>
