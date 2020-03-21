@@ -94,4 +94,3 @@ $tagsData = $category->tags->itemTags;
 		<?php endif; ?>
 	</div>
 </div>
-
