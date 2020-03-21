@@ -1,3 +1,7 @@
+.item-image {
+	width: 50%;
+}
+
 .readmore {
 	.btn {
 		margin-top: 20px;
@@ -57,6 +61,49 @@
 		margin-left: 30px;
 		font-size: 2em;
 		font-weight: bold;
+	}
+}
+
+.blog-featured {
+	margin-left: 0;
+	margin-right: 0;
+	.items-row {
+		margin-left: 0;
+		margin-right: 0;
+		display: flex;
+		.item {
+			margin: 20px 0;
+			.gil-rounded();
+			background-image: url('/templates/tpl_gle/images/news.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: left center;
+			padding: 30px 20px 30px 160px;
+			box-sizing: border-box;
+			.item-image {
+				display: none;
+			}
+		}
+	}
+	@media screen and (max-width: 1200px) {
+		.items-row {
+			display: block;
+			.item {
+				margin: 40px 0;
+			}
+		}
+	}
+	h2.item-title {
+		margin-bottom: 0;
+		margin-top: 20px;
+		font-size: 1.65em;
+	}
+	p {
+		margin-bottom: 2em;
+		font-size: 1em;
+	}
+	p.readmore {
+		font-size: 1em;
 	}
 }
 
@@ -226,24 +273,10 @@
 	}
 }
 
-.item-image {
-	width: 50%;
-}
-
 @media screen and (max-width: 1200px) {
 	.blog {
 		margin-left: 0;
 		margin-right: 0;
-	}
-
-	.blog.photoblog {
-		.items-row {
-			.item-content {
-				div:not(.page-header) {
-					height: calc(24px * var(--max-lines));
-				}
-			}
-		}
 	}
 
 	.blog.contact{
@@ -261,48 +294,15 @@
 			}
 		}
 	}
-}
 
-.blog-featured {
-	margin-left: 0;
-	margin-right: 0;
-	.items-row {
-		margin-left: 0;
-		margin-right: 0;
-		display: flex;
-		.item {
-			margin: 20px 0;
-			.gil-rounded();
-			background-image: url('/templates/tpl_gle/images/news.svg');
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: left center;
-			padding: 30px 20px 30px 160px;
-			box-sizing: border-box;
-			.item-image {
-				display: none;
-			}
-		}
-	}
-	@media screen and (max-width: 1200px) {
+	.blog.photoblog {
 		.items-row {
-			display: block;
-			.item {
-				margin: 40px 0;
+			.item-content {
+				div:not(.page-header) {
+					height: calc(24px * var(--max-lines));
+				}
 			}
 		}
-	}
-	h2.item-title {
-		margin-bottom: 0;
-		margin-top: 20px;
-		font-size: 1.65em;
-	}
-	p {
-		margin-bottom: 2em;
-		font-size: 1em;
-	}
-	p.readmore {
-		font-size: 1em;
 	}
 }
 

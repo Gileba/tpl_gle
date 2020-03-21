@@ -2,7 +2,7 @@ ul.nav li a {
 	color: @text-color;
 }
 
-.container .top ul, ul.nav {
+ul.nav, .container .top ul {
 	list-style: none;
 	.gil-right();
 	li a {
@@ -10,7 +10,7 @@ ul.nav li a {
 	}
 }
 
-.container .top div, div.navigation div, div.navigation ul {
+div.navigation div, .container .top div, div.navigation ul {
 	flex: auto;
 	.gil-margin-remove-top();
 	.gil-margin-remove-bottom();
@@ -80,7 +80,7 @@ ul.nav li a {
 }
 
 @media screen and (min-width: 1201px) {
-	.container .top ul li, ul.nav li {
+	 ul.nav li, .container .top ul li {
 		display: inline;
 	}
 }
