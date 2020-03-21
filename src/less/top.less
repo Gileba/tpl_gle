@@ -1,3 +1,21 @@
+ul.nav li a {
+	color: @text-color;
+}
+
+.container .top ul, ul.nav {
+	list-style: none;
+	.gil-right();
+	li a {
+		text-decoration: none;
+	}
+}
+
+.container .top div, div.navigation div, div.navigation ul {
+	flex: auto;
+	.gil-margin-remove-top();
+	.gil-margin-remove-bottom();
+}
+
 .container .top {
 	margin-top: 10px;
 	padding-left: 20px;
@@ -61,28 +79,10 @@
 	}
 }
 
-.container .top div, div.navigation div, div.navigation ul {
-	flex: auto;
-	.gil-margin-remove-top();
-	.gil-margin-remove-bottom();
-}
-
-.container .top ul, ul.nav {
-	list-style: none;
-	.gil-right();
-	li a {
-		text-decoration: none;
-	}
-}
-
 @media screen and (min-width: 1201px) {
 	.container .top ul li, ul.nav li {
 		display: inline;
 	}
-}
-
-ul.nav li a {
-	color: @text-color;
 }
 
 @media screen and (max-width: 1200px) {
