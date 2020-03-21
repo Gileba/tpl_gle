@@ -42,10 +42,11 @@ if (substr($className, -1) === 's')
 {
 	$className = rtrim($className, 's');
 }
+
 $tagsData = $category->tags->itemTags;
 ?>
 <div>
-	<div class="<?php echo $className .'-category' . $displayData->pageclass_sfx; ?>">
+	<div class="<?php echo $className . '-category' . $displayData->pageclass_sfx; ?>">
 		<?php if ($params->get('show_page_heading')) : ?>
 			<h1>
 				<?php echo $displayData->escape($params->get('page_heading')); ?>
@@ -63,16 +64,19 @@ $tagsData = $category->tags->itemTags;
 			<?php echo JLayoutHelper::render('joomla.content.tags', $tagsData); ?>
 		<?php endif; ?>
 
-		<?php if ($beforeDisplayContent || $afterDisplayContent || $params->get('show_description', 1) || $params->def('show_description_image', 1)) : ?>
+		<?php
+		if ($beforeDisplayContent || $afterDisplayContent || $params->get('show_description', 1) || $params->def('show_description_image', 1)) :
+			?>
 			<div class="category-desc">
-				<?php if ($params->get('show_description_image') && $category->getParams()->get('image')) : ?>
-					<img src="<?php echo $category->getParams()->get('image'); ?>" alt="<?php echo htmlspecialchars($category->getParams()->get('image_alt'), ENT_COMPAT, 'UTF-8'); ?>"/>
-				<?php endif; ?>
-				<?php echo $beforeDisplayContent; ?>
-				<?php if ($params->get('show_description') && $category->description) : ?>
+			<?php if ($params->get('show_description_image') && $category->getParams()->get('image')) : ?>
+					<img src="<?php echo $category->getParams()->get('image'); ?>"
+					alt="<?php echo htmlspecialchars($category->getParams()->get('image_alt'), ENT_COMPAT, 'UTF-8'); ?>"/>
+			<?php endif; ?>
+			<?php echo $beforeDisplayContent; ?>
+			<?php if ($params->get('show_description') && $category->description) : ?>
 					<?php echo JHtml::_('content.prepare', $category->description, '', $extension . '.category.description'); ?>
-				<?php endif; ?>
-				<?php echo $afterDisplayContent; ?>
+			<?php endif; ?>
+			<?php echo $afterDisplayContent; ?>
 				<div class="clr"></div>
 			</div>
 		<?php endif; ?>
@@ -90,4 +94,3 @@ $tagsData = $category->tags->itemTags;
 		<?php endif; ?>
 	</div>
 </div>
-
