@@ -29,8 +29,7 @@ deploy:
   file:
   - packages/tpl_gle.zip
   - pkg_gle.zip
-  skip_cleanup: true
   on:
     tags: true
-  api_key: $GITHUB_TOKEN
+  token: $GITHUB_TOKEN
 after_deploy: curl -T tpl_gle/tpl_gle.xml -u $FTP_USER:$FTP_PASSWORD $FTP_SERVER
