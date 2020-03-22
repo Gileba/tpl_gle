@@ -13,6 +13,6 @@
 		<file type="plugin" id="templatecompanion" group="system">plg_system_templatecompanion.zip</file>
 	</files>
 	<updateservers>
-		<server type="extension" name="GLE Group Package">https://www.gileba.be/updates/tpl_gle.xml</server>
+		<server type="extension" name="GLE Group Package">https://updates.gileba.be/tpl_gle.xml</server>
 	</updateservers>
 </extension>
