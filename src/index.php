@@ -1,8 +1,13 @@
 <?php
 	defined('_JEXEC') or die('Restricted access');
 
+	/** @var JDocumentHtml $this */
 	$app      	= JFactory::getApplication();
 	$doc      	= JFactory::getDocument();
+
+	/** Output as HTML5 */
+	$this->setHtml5(true);
+
 	$menu 		= $app->getMenu();
 	$params		= $app->getTemplate(true)->params;
 	$config 	= JFactory::getConfig();
@@ -36,5 +41,17 @@
 			<div class="footer"><jdoc:include type="modules" name="footer" /></div>
 		</div>
 		<script src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template; ?>/js/hamburger.js"></script>
+<?php	if ($this->params->get('analytics')) {	?>
+		<!-- Google Analytics -->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })
+			  (window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			  ga('create', '<?php	echo $this->params->get('analytics'); ?>', 'auto');
+			  ga('send', 'pageview');
+		  </script>
+<?php	}	?>
 	</body>
 </html>
