@@ -31,6 +31,9 @@
 			<fieldset name="global">
 				<field name="useLESS" type="hidden" default="true" />
 			</fieldset>
+			<fieldset name="google">
+				<field name="analytics" type="textbox" default="" label="TPL_GLE_ANALYTICS" description="TPL_GLE_ANALYTICS_DESC" />
+			</fieldset>
 		</fieldset>
 	</config>
 </extension>
