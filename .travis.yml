@@ -26,6 +26,7 @@ before_deploy:
 - zip pkg_gle packages/tpl_gle.zip packages/plg_system_templatecompanion.zip pkg_gle.xml
 deploy:
   provider: releases
+  edge: true
   file:
   - packages/tpl_gle.zip
   - pkg_gle.zip
