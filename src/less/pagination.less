@@ -1,4 +1,4 @@
-// Bloglist naviagtion
+// Bloglist navigation
 .pagination {
 	.gil-center();
 
@@ -33,19 +33,31 @@
 }
 
 // Article Next / Previous
-ul.pager {
+.pager.pagenav {
 	list-style: none;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	grid-template-areas: "prev next";
 	padding-inline-start: 0px;
 
 	li {
-		padding-inline-start: 0px;
+		width: intrinsic;
 
-		&.previous {
-			float: left;
+		.btn {
+			padding-left: 20px;
 		}
 
-		&.next a {
-			padding-left: 20px;
+		&.next {
+			grid-area: next;
+			justify-self: end;
+		}
+
+		&.previous {
+			grid-area: prev;
+			width: fit-content; /* Chrome fix */
 		}
 	}
 }
